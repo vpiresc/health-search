@@ -25,6 +25,7 @@
 		9C9DE3672C0FA91500BC281D /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE3662C0FA91500BC281D /* NetworkServiceMock.swift */; };
 		9C9DE36B2C10961E00BC281D /* ProviderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE36A2C10961E00BC281D /* ProviderResponse.swift */; };
 		9C9DE36D2C10964800BC281D /* ProviderResponse+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE36C2C10964800BC281D /* ProviderResponse+Mapper.swift */; };
+		9C9DE3712C1098C800BC281D /* HealthListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE3702C1098C800BC281D /* HealthListViewModelSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		9C9DE3662C0FA91500BC281D /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		9C9DE36A2C10961E00BC281D /* ProviderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderResponse.swift; sourceTree = "<group>"; };
 		9C9DE36C2C10964800BC281D /* ProviderResponse+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProviderResponse+Mapper.swift"; sourceTree = "<group>"; };
+		9C9DE3702C1098C800BC281D /* HealthListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListViewModelSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				9C9DE3662C0FA91500BC281D /* NetworkServiceMock.swift */,
+				9C9DE3702C1098C800BC281D /* HealthListViewModelSpy.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9DE3652C0FA7D700BC281D /* HealthListViewTests.swift in Sources */,
+				9C9DE3712C1098C800BC281D /* HealthListViewModelSpy.swift in Sources */,
 				9C0936592C0F4CEE001E875E /* HealthListViewModelImplTests.swift in Sources */,
 				9C9DE3672C0FA91500BC281D /* NetworkServiceMock.swift in Sources */,
 			);
