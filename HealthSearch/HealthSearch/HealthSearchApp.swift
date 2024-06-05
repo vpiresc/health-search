@@ -11,7 +11,7 @@ import SwiftUI
 struct HealthSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HealthListViewFactory.make()
         }
     }
 }
