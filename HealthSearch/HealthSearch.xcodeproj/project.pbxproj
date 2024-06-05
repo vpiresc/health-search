@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		9C0936482C0F4CEB001E875E /* HealthSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936472C0F4CEB001E875E /* HealthSearchApp.swift */; };
-		9C09364A2C0F4CEB001E875E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936492C0F4CEB001E875E /* ContentView.swift */; };
 		9C09364C2C0F4CEE001E875E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C09364B2C0F4CEE001E875E /* Assets.xcassets */; };
 		9C09364F2C0F4CEE001E875E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C09364E2C0F4CEE001E875E /* Preview Assets.xcassets */; };
-		9C0936592C0F4CEE001E875E /* HealthSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936582C0F4CEE001E875E /* HealthSearchTests.swift */; };
-		9C0936632C0F4CEE001E875E /* HealthSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936622C0F4CEE001E875E /* HealthSearchUITests.swift */; };
-		9C0936652C0F4CEE001E875E /* HealthSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936642C0F4CEE001E875E /* HealthSearchUITestsLaunchTests.swift */; };
+		9C0936592C0F4CEE001E875E /* HealthListViewModelImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936582C0F4CEE001E875E /* HealthListViewModelImplTests.swift */; };
+		9C0936962C0F4F95001E875E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936952C0F4F95001E875E /* NetworkService.swift */; };
+		9C0936982C0F4FEB001E875E /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936972C0F4FEB001E875E /* LocalService.swift */; };
+		9C09369A2C0F502C001E875E /* providers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C0936992C0F502C001E875E /* providers.json */; };
+		9C09369D2C0F53B2001E875E /* HealthListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09369C2C0F53B2001E875E /* HealthListView.swift */; };
+		9C09369F2C0F8904001E875E /* ProviderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09369E2C0F8904001E875E /* ProviderModel.swift */; };
+		9C0936A22C0F899F001E875E /* HealthListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936A12C0F899F001E875E /* HealthListViewModel.swift */; };
+		9C0936A42C0F89DE001E875E /* HealthListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936A32C0F89DE001E875E /* HealthListViewModelImpl.swift */; };
+		9C0936A72C0F8ACB001E875E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936A62C0F8ACB001E875E /* NetworkError.swift */; };
+		9C0936AA2C0F8DBE001E875E /* HealthListViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936A92C0F8DBE001E875E /* HealthListViewFactory.swift */; };
+		9C9DE3622C0FA1C900BC281D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE3612C0FA1C900BC281D /* Constants.swift */; };
+		9C9DE3652C0FA7D700BC281D /* HealthListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE3642C0FA7D700BC281D /* HealthListViewTests.swift */; };
+		9C9DE3672C0FA91500BC281D /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE3662C0FA91500BC281D /* NetworkServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,26 +33,40 @@
 			remoteGlobalIDString = 9C0936432C0F4CEB001E875E;
 			remoteInfo = HealthSearch;
 		};
-		9C09365F2C0F4CEE001E875E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C09363C2C0F4CEB001E875E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C0936432C0F4CEB001E875E;
-			remoteInfo = HealthSearch;
-		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C09368E2C0F4DAF001E875E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9C0936442C0F4CEB001E875E /* HealthSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0936472C0F4CEB001E875E /* HealthSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthSearchApp.swift; sourceTree = "<group>"; };
-		9C0936492C0F4CEB001E875E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9C09364B2C0F4CEE001E875E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C09364E2C0F4CEE001E875E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C0936542C0F4CEE001E875E /* HealthSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C0936582C0F4CEE001E875E /* HealthSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthSearchTests.swift; sourceTree = "<group>"; };
-		9C09365E2C0F4CEE001E875E /* HealthSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C0936622C0F4CEE001E875E /* HealthSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthSearchUITests.swift; sourceTree = "<group>"; };
-		9C0936642C0F4CEE001E875E /* HealthSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9C0936582C0F4CEE001E875E /* HealthListViewModelImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListViewModelImplTests.swift; sourceTree = "<group>"; };
+		9C0936952C0F4F95001E875E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9C0936972C0F4FEB001E875E /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
+		9C0936992C0F502C001E875E /* providers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = providers.json; sourceTree = "<group>"; };
+		9C09369C2C0F53B2001E875E /* HealthListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListView.swift; sourceTree = "<group>"; };
+		9C09369E2C0F8904001E875E /* ProviderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderModel.swift; sourceTree = "<group>"; };
+		9C0936A12C0F899F001E875E /* HealthListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListViewModel.swift; sourceTree = "<group>"; };
+		9C0936A32C0F89DE001E875E /* HealthListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListViewModelImpl.swift; sourceTree = "<group>"; };
+		9C0936A62C0F8ACB001E875E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		9C0936A92C0F8DBE001E875E /* HealthListViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListViewFactory.swift; sourceTree = "<group>"; };
+		9C9DE3612C0FA1C900BC281D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C9DE3642C0FA7D700BC281D /* HealthListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListViewTests.swift; sourceTree = "<group>"; };
+		9C9DE3662C0FA91500BC281D /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +84,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C09365B2C0F4CEE001E875E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +92,6 @@
 			children = (
 				9C0936462C0F4CEB001E875E /* HealthSearch */,
 				9C0936572C0F4CEE001E875E /* HealthSearchTests */,
-				9C0936612C0F4CEE001E875E /* HealthSearchUITests */,
 				9C0936452C0F4CEB001E875E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +101,6 @@
 			children = (
 				9C0936442C0F4CEB001E875E /* HealthSearch.app */,
 				9C0936542C0F4CEE001E875E /* HealthSearchTests.xctest */,
-				9C09365E2C0F4CEE001E875E /* HealthSearchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,8 +108,12 @@
 		9C0936462C0F4CEB001E875E /* HealthSearch */ = {
 			isa = PBXGroup;
 			children = (
+				9C0936942C0F4F7C001E875E /* Data */,
+				9C9DE3682C10933200BC281D /* Domain */,
+				9C09369B2C0F536D001E875E /* Presentation */,
+				9C0936A82C0F8D76001E875E /* Factories */,
+				9C0936A52C0F8AAF001E875E /* Helpers */,
 				9C0936472C0F4CEB001E875E /* HealthSearchApp.swift */,
-				9C0936492C0F4CEB001E875E /* ContentView.swift */,
 				9C09364B2C0F4CEE001E875E /* Assets.xcassets */,
 				9C09364D2C0F4CEE001E875E /* Preview Content */,
 			);
@@ -113,18 +131,96 @@
 		9C0936572C0F4CEE001E875E /* HealthSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				9C0936582C0F4CEE001E875E /* HealthSearchTests.swift */,
+				9C9DE3632C0FA4A600BC281D /* Mocks */,
+				9C0936582C0F4CEE001E875E /* HealthListViewModelImplTests.swift */,
+				9C9DE3642C0FA7D700BC281D /* HealthListViewTests.swift */,
 			);
 			path = HealthSearchTests;
 			sourceTree = "<group>";
 		};
-		9C0936612C0F4CEE001E875E /* HealthSearchUITests */ = {
+		9C0936942C0F4F7C001E875E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9C0936622C0F4CEE001E875E /* HealthSearchUITests.swift */,
-				9C0936642C0F4CEE001E875E /* HealthSearchUITestsLaunchTests.swift */,
+				9C0936972C0F4FEB001E875E /* LocalService.swift */,
+				9C0936992C0F502C001E875E /* providers.json */,
+				9C09369E2C0F8904001E875E /* ProviderModel.swift */,
 			);
-			path = HealthSearchUITests;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9C09369B2C0F536D001E875E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9C0936A02C0F8969001E875E /* HeathListScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9C0936A02C0F8969001E875E /* HeathListScene */ = {
+			isa = PBXGroup;
+			children = (
+				9C9DE3692C10938200BC281D /* ViewModel */,
+				9C09369C2C0F53B2001E875E /* HealthListView.swift */,
+			);
+			path = HeathListScene;
+			sourceTree = "<group>";
+		};
+		9C0936A52C0F8AAF001E875E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C0936A62C0F8ACB001E875E /* NetworkError.swift */,
+				9C9DE3612C0FA1C900BC281D /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9C0936A82C0F8D76001E875E /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				9C0936A92C0F8DBE001E875E /* HealthListViewFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		9C9DE35F2C0FA12A00BC281D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				9C0936952C0F4F95001E875E /* NetworkService.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		9C9DE3602C0FA13800BC281D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				9C0936A12C0F899F001E875E /* HealthListViewModel.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		9C9DE3632C0FA4A600BC281D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9C9DE3662C0FA91500BC281D /* NetworkServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9C9DE3682C10933200BC281D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9C9DE35F2C0FA12A00BC281D /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9C9DE3692C10938200BC281D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C9DE3602C0FA13800BC281D /* Interfaces */,
+				9C0936A32C0F89DE001E875E /* HealthListViewModelImpl.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +233,7 @@
 				9C0936402C0F4CEB001E875E /* Sources */,
 				9C0936412C0F4CEB001E875E /* Frameworks */,
 				9C0936422C0F4CEB001E875E /* Resources */,
+				9C09368E2C0F4DAF001E875E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,24 +262,6 @@
 			productReference = 9C0936542C0F4CEE001E875E /* HealthSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9C09365D2C0F4CEE001E875E /* HealthSearchUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C09366E2C0F4CEE001E875E /* Build configuration list for PBXNativeTarget "HealthSearchUITests" */;
-			buildPhases = (
-				9C09365A2C0F4CEE001E875E /* Sources */,
-				9C09365B2C0F4CEE001E875E /* Frameworks */,
-				9C09365C2C0F4CEE001E875E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C0936602C0F4CEE001E875E /* PBXTargetDependency */,
-			);
-			name = HealthSearchUITests;
-			productName = HealthSearchUITests;
-			productReference = 9C09365E2C0F4CEE001E875E /* HealthSearchUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +276,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					9C0936532C0F4CEE001E875E = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 9C0936432C0F4CEB001E875E;
-					};
-					9C09365D2C0F4CEE001E875E = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 9C0936432C0F4CEB001E875E;
 					};
@@ -221,7 +296,6 @@
 			targets = (
 				9C0936432C0F4CEB001E875E /* HealthSearch */,
 				9C0936532C0F4CEE001E875E /* HealthSearchTests */,
-				9C09365D2C0F4CEE001E875E /* HealthSearchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,18 +306,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C09364F2C0F4CEE001E875E /* Preview Assets.xcassets in Resources */,
+				9C09369A2C0F502C001E875E /* providers.json in Resources */,
 				9C09364C2C0F4CEE001E875E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9C0936522C0F4CEE001E875E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C09365C2C0F4CEE001E875E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,7 +325,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C09364A2C0F4CEB001E875E /* ContentView.swift in Sources */,
+				9C0936A72C0F8ACB001E875E /* NetworkError.swift in Sources */,
+				9C09369F2C0F8904001E875E /* ProviderModel.swift in Sources */,
+				9C09369D2C0F53B2001E875E /* HealthListView.swift in Sources */,
+				9C0936AA2C0F8DBE001E875E /* HealthListViewFactory.swift in Sources */,
+				9C0936A22C0F899F001E875E /* HealthListViewModel.swift in Sources */,
+				9C9DE3622C0FA1C900BC281D /* Constants.swift in Sources */,
+				9C0936A42C0F89DE001E875E /* HealthListViewModelImpl.swift in Sources */,
+				9C0936982C0F4FEB001E875E /* LocalService.swift in Sources */,
+				9C0936962C0F4F95001E875E /* NetworkService.swift in Sources */,
 				9C0936482C0F4CEB001E875E /* HealthSearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,16 +342,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0936592C0F4CEE001E875E /* HealthSearchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C09365A2C0F4CEE001E875E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C0936652C0F4CEE001E875E /* HealthSearchUITestsLaunchTests.swift in Sources */,
-				9C0936632C0F4CEE001E875E /* HealthSearchUITests.swift in Sources */,
+				9C9DE3652C0FA7D700BC281D /* HealthListViewTests.swift in Sources */,
+				9C0936592C0F4CEE001E875E /* HealthListViewModelImplTests.swift in Sources */,
+				9C9DE3672C0FA91500BC281D /* NetworkServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +355,6 @@
 			isa = PBXTargetDependency;
 			target = 9C0936432C0F4CEB001E875E /* HealthSearch */;
 			targetProxy = 9C0936552C0F4CEE001E875E /* PBXContainerItemProxy */;
-		};
-		9C0936602C0F4CEE001E875E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C0936432C0F4CEB001E875E /* HealthSearch */;
-			targetProxy = 9C09365F2C0F4CEE001E875E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,42 +576,6 @@
 			};
 			name = Release;
 		};
-		9C09366F2C0F4CEE001E875E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5A8822F6XB;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vitor.pires.HealthSearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HealthSearch;
-			};
-			name = Debug;
-		};
-		9C0936702C0F4CEE001E875E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5A8822F6XB;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vitor.pires.HealthSearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HealthSearch;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,15 +602,6 @@
 			buildConfigurations = (
 				9C09366C2C0F4CEE001E875E /* Debug */,
 				9C09366D2C0F4CEE001E875E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C09366E2C0F4CEE001E875E /* Build configuration list for PBXNativeTarget "HealthSearchUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C09366F2C0F4CEE001E875E /* Debug */,
-				9C0936702C0F4CEE001E875E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

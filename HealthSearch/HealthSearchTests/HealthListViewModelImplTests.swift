@@ -8,29 +8,66 @@
 import XCTest
 @testable import HealthSearch
 
-final class HealthSearchTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+final class HealthListViewModelImplTests: XCTestCase {
+    // MARK: - Subject under test
+    
+    var sut: HealthListViewModelImpl!
+    var serviceMock: NetworkServiceMock!
+    
+    // MARK: - Test lifecycle
+    
+    @MainActor override func setUp() {
+        super.setUp()
+        serviceMock = NetworkServiceMock()
+        sut = HealthListViewModelImpl(service:  serviceMock)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        sut = nil
+        serviceMock = nil
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    // MARK: Tests
+    
+    func test_prepareData_callsServiceLoad() async {
+        do {
+            _ = try await sut.prepareData()
+            XCTAssertEqual(serviceMock.loadWasCalled, 1)
+        } catch {
+            XCTFail("prepareData should not return any error")
         }
     }
+    
+    @MainActor func test_prepareData_succeedsWithOneValueForSearchResults() async {
+        let result = resultValuesFor("H1")
+        
+        XCTAssertEqual(result, ["H1"])
+        XCTAssertEqual(result.count, 1)
+        
+    }
+    
+    @MainActor func test_prepareData_succeedsWithThreeValuesForSearchResults() async {
+        let result = resultValuesFor("H")
+        
+        XCTAssertEqual(result, ["H1","H2","H3"])
+        XCTAssertEqual(result.count, 3)
+        
+    }
+    
+    @MainActor func test_prepareData_succeedsWithEmptyValuesForSearchResults() async {
+        let result = resultValuesFor("")
+        
+        XCTAssertEqual(result, ["H1","H2","H3"])
+        XCTAssertEqual(result.count, 3)
+        
+    }
 
+    // MARK: - Helpers
+    
+    @MainActor private func resultValuesFor(_ searchText: String) -> [String] {
+        sut.providersNames = ["H1","H2","H3"]
+        return sut.searchResults(searchText)
+    }
+    
 }
