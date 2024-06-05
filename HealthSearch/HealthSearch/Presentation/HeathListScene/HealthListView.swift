@@ -7,27 +7,33 @@ struct HealthListView<VM: HealthListViewModel>: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(searchResults, id: \.self) { name in
+                ForEach(Array(searchResults.enumerated()), id: \.offset) { index, name in
                     Text(name)
                 }
+            }.task {
+                await displayData()
             }
-            .navigationTitle("Contacts")
+            .navigationTitle(viewModel.pageTitle)
             .listStyle(.plain)
         }
         .searchable(text: $searchText)
     }
     
     var searchResults: [String] {
-        if searchText.isEmpty {
-            return viewModel.providersNames
-            
-        } else {
-            return viewModel.providersNames.filter { $0.contains(searchText) }
-            
+        viewModel.searchResults(searchText)
+    }
+}
+
+extension HealthListView: HealthListViewModellDisplayLogic {
+    func displayData() async {
+        do {
+            try await viewModel.prepareData()
+        } catch {
+            print(error)
         }
     }
 }
 
-//#Preview {
-//    HealthListView(viewModel: <#_#>)
-//}
+#Preview {
+    HealthListViewFactory.make()
+}
