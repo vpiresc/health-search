@@ -8,7 +8,7 @@
 import Foundation
 
 class LocalService: NetworkService {
-    func load() -> ProviderModel {
+    func load() -> ProviderResponse {
         let filename = Constants.providersName
         let data: Data
         
@@ -25,9 +25,9 @@ class LocalService: NetworkService {
         
         do {
             let decoder = JSONDecoder()
-            return try decoder.decode(ProviderModel.self, from: data)
+            return try decoder.decode(ProviderResponse.self, from: data)
         } catch {
-            fatalError("Couldn't parse \(filename) as \(ProviderModel.self): \(error)")
+            fatalError("Couldn't parse \(filename) as \(ProviderResponse.self): \(error)")
         }
     }
 }

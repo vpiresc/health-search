@@ -9,5 +9,5 @@
 import Foundation
 
 protocol NetworkService {
-    func load() async throws -> ProviderModel
+    func load() async throws -> ProviderResponse
 }

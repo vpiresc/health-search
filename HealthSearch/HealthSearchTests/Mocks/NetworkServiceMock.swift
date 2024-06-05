@@ -10,8 +10,8 @@ import Foundation
 
 final class NetworkServiceMock: NetworkService {
     var loadWasCalled = 0
-    func load() async throws -> ProviderModel {
+    func load() async throws -> ProviderResponse {
         loadWasCalled += 1
-        return ProviderModel(data: [])
+        return ProviderResponse(data: [])
     }
 }

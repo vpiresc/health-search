@@ -23,6 +23,8 @@
 		9C9DE3622C0FA1C900BC281D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE3612C0FA1C900BC281D /* Constants.swift */; };
 		9C9DE3652C0FA7D700BC281D /* HealthListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE3642C0FA7D700BC281D /* HealthListViewTests.swift */; };
 		9C9DE3672C0FA91500BC281D /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE3662C0FA91500BC281D /* NetworkServiceMock.swift */; };
+		9C9DE36B2C10961E00BC281D /* ProviderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE36A2C10961E00BC281D /* ProviderResponse.swift */; };
+		9C9DE36D2C10964800BC281D /* ProviderResponse+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DE36C2C10964800BC281D /* ProviderResponse+Mapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		9C9DE3612C0FA1C900BC281D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C9DE3642C0FA7D700BC281D /* HealthListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListViewTests.swift; sourceTree = "<group>"; };
 		9C9DE3662C0FA91500BC281D /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
+		9C9DE36A2C10961E00BC281D /* ProviderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderResponse.swift; sourceTree = "<group>"; };
+		9C9DE36C2C10964800BC281D /* ProviderResponse+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProviderResponse+Mapper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +147,7 @@
 			children = (
 				9C0936972C0F4FEB001E875E /* LocalService.swift */,
 				9C0936992C0F502C001E875E /* providers.json */,
-				9C09369E2C0F8904001E875E /* ProviderModel.swift */,
+				9C9DE36F2C10968700BC281D /* DataMapping */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -209,6 +213,7 @@
 		9C9DE3682C10933200BC281D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				9C9DE36E2C10967B00BC281D /* Entities */,
 				9C9DE35F2C0FA12A00BC281D /* Interfaces */,
 			);
 			path = Domain;
@@ -221,6 +226,23 @@
 				9C0936A32C0F89DE001E875E /* HealthListViewModelImpl.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C9DE36E2C10967B00BC281D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9C09369E2C0F8904001E875E /* ProviderModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		9C9DE36F2C10968700BC281D /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				9C9DE36A2C10961E00BC281D /* ProviderResponse.swift */,
+				9C9DE36C2C10964800BC281D /* ProviderResponse+Mapper.swift */,
+			);
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,10 +352,12 @@
 				9C09369D2C0F53B2001E875E /* HealthListView.swift in Sources */,
 				9C0936AA2C0F8DBE001E875E /* HealthListViewFactory.swift in Sources */,
 				9C0936A22C0F899F001E875E /* HealthListViewModel.swift in Sources */,
+				9C9DE36B2C10961E00BC281D /* ProviderResponse.swift in Sources */,
 				9C9DE3622C0FA1C900BC281D /* Constants.swift in Sources */,
 				9C0936A42C0F89DE001E875E /* HealthListViewModelImpl.swift in Sources */,
 				9C0936982C0F4FEB001E875E /* LocalService.swift in Sources */,
 				9C0936962C0F4F95001E875E /* NetworkService.swift in Sources */,
+				9C9DE36D2C10964800BC281D /* ProviderResponse+Mapper.swift in Sources */,
 				9C0936482C0F4CEB001E875E /* HealthSearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

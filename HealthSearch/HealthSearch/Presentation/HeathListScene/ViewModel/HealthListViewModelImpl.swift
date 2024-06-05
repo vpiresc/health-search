@@ -15,7 +15,7 @@ class HealthListViewModelImpl: HealthListViewModel {
 extension HealthListViewModelImpl {
     func prepareData() async throws {
         do {
-            let providerViewModel = try await service.load()
+            let providerViewModel = try await service.load().toData()
             pageTitle = Constants.homeScreenName
             providersNames = makeProvidersNames(providerViewModel.data)
         } catch {
