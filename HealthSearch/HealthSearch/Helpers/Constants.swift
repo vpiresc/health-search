@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Constants {
+    static let providersName = "providers.json"
+    static let homeScreenName = "Health Search"
+}
