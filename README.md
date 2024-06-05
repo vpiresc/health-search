@@ -1,4 +1,6 @@
-# Health Search #
+# About the Health Search #
+
+![](https://github.com/vpiresc/health-search/blob/main/images/health-providers-high-level-design.png)
 
 This is a list of health providers. You can search for a health provider by text, and the list will be filtered accordingly.
 
