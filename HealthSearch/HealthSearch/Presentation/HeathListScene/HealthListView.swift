@@ -3,20 +3,23 @@ import SwiftUI
 struct HealthListView<VM: HealthListViewModel>: View {
     @ObservedObject var viewModel: VM
     @State private var searchText = ""
+    private let primaryColor = Color(red: 1.0, green: 0.0, blue: 0.52)
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(Array(searchResults.enumerated()), id: \.offset) { index, name in
-                    Text(name)
+                ForEach(searchResults, id: \.self) { name in
+                    Text(name)                       .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .bottom)))
                 }
-            }.task {
-                await displayData()
             }
-            .navigationTitle(viewModel.pageTitle)
-            .listStyle(.plain)
+            .task {
+                await displayData()
+            }.animation(.default, value: searchResults)
+                .navigationTitle(viewModel.pageTitle)
+                .listStyle(.plain)
         }
         .searchable(text: $searchText)
+        .accentColor(primaryColor)
     }
     
     var searchResults: [String] {
