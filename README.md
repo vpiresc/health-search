@@ -2,7 +2,7 @@
 
 ![](https://github.com/vpiresc/health-search/blob/main/images/health-providers-high-level-design.png)
 
-This is a list of health providers. You can search for a health provider by text, and the list will be filtered accordingly.
+This is a list of health providers. You can search for a health provider name by text, and the list will be filtered accordingly.
 
 ## Technical Details
 - The project follows the clean architecture, so It is organized into `Domain`, `Data`, and `Presentation` layers. The app is built using Swift and SwiftUI for the views, following the `Model-View-ViewModel`(MVVM) design pattern. This architectural choice enhances separation of concerns and facilitates testability. 
