@@ -9,7 +9,8 @@ struct HealthListView<VM: HealthListViewModel>: View {
         NavigationStack {
             List {
                 ForEach(searchResults, id: \.id) { provider in
-                    Text(provider.name)                       .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .bottom)))
+                    Text(provider.name)
+                        .transition(.move(edge: .bottom))
                 }
             }
             .task {
