@@ -42,7 +42,7 @@ final class HealthListViewModelImplTests: XCTestCase {
     @MainActor func test_prepareData_succeedsWithOneValueForSearchResults() async {
         let result = resultValuesFor("H1")
         
-        XCTAssertEqual(result, ["H1"])
+        XCTAssertEqual(result, makeProvidersString([Provider(name:"H1")]))
         XCTAssertEqual(result.count, 1)
         
     }
@@ -50,7 +50,7 @@ final class HealthListViewModelImplTests: XCTestCase {
     @MainActor func test_prepareData_succeedsWithThreeValuesForSearchResults() async {
         let result = resultValuesFor("H")
         
-        XCTAssertEqual(result, ["H1","H2","H3"])
+        XCTAssertEqual(result, makeProvidersString())
         XCTAssertEqual(result.count, 3)
         
     }
@@ -58,7 +58,7 @@ final class HealthListViewModelImplTests: XCTestCase {
     @MainActor func test_prepareData_succeedsWithEmptyValuesForSearchResults() async {
         let result = resultValuesFor("")
         
-        XCTAssertEqual(result, ["H1","H2","H3"])
+        XCTAssertEqual(result, makeProvidersString())
         XCTAssertEqual(result.count, 3)
         
     }
@@ -66,8 +66,23 @@ final class HealthListViewModelImplTests: XCTestCase {
     // MARK: - Helpers
     
     @MainActor private func resultValuesFor(_ searchText: String) -> [String] {
-        sut.providersNames = ["H1","H2","H3"]
-        return sut.searchResults(searchText)
+        sut.providersNames = makeProviders()
+        return makeProvidersNames(sut.searchResults(searchText))
     }
     
+    private func makeProviders() -> [Provider] {
+        [Provider(name: "H1"), Provider(name: "H2"), Provider(name: "H3")]
+    }
+    
+    private func makeProvidersString(_ providers: [Provider] = [Provider(name: "H1"), Provider(name: "H2"), Provider(name: "H3")]) -> [String] {
+        makeProvidersNames(providers)
+    }
+    
+    private func makeProvidersNames(_ providers: [Provider]) -> [String] {
+        var names: [String] = []
+        for index in 0..<providers.count {
+            names.append(providers[index].name)
+        }
+        return names
+    }
 }

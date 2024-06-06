@@ -12,8 +12,8 @@ protocol HealthListViewModelInputLogic {
 @MainActor
 protocol HealthListViewModelOutputLogic {
     var pageTitle: String { get }
-    var providersNames: [String] { get }
-    func searchResults(_ searchText: String) -> [String]
+    var providersNames: [Provider] { get }
+    func searchResults(_ searchText: String) -> [Provider]
 }
 
 protocol HealthListViewModel: HealthListViewModelInputLogic, HealthListViewModelOutputLogic, ObservableObject {}

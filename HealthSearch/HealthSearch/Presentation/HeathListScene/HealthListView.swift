@@ -8,8 +8,8 @@ struct HealthListView<VM: HealthListViewModel>: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(searchResults, id: \.self) { name in
-                    Text(name)                       .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .bottom)))
+                ForEach(searchResults, id: \.id) { provider in
+                    Text(provider.name)                       .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .bottom)))
                 }
             }
             .task {
@@ -22,7 +22,7 @@ struct HealthListView<VM: HealthListViewModel>: View {
         .accentColor(primaryColor)
     }
     
-    var searchResults: [String] {
+    var searchResults: [Provider] {
         viewModel.searchResults(searchText)
     }
 }

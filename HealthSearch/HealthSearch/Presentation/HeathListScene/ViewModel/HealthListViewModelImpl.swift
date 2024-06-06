@@ -3,7 +3,7 @@ import Foundation
 @MainActor
 class HealthListViewModelImpl: HealthListViewModel {
     @Published var pageTitle: String = ""
-    @Published var providersNames: [String] = []
+    @Published var providersNames: [Provider] = []
 
     private let service: NetworkService
     
@@ -17,25 +17,15 @@ extension HealthListViewModelImpl {
         do {
             let providerViewModel = try await service.load().toData()
             pageTitle = Constants.homeScreenName
-            providersNames = makeProvidersNames(providerViewModel.data)
+            providersNames = providerViewModel.data
         } catch {
             throw(NetworkError.unableToLoad)
         }
     }
     
-    func searchResults(_ searchText: String) -> [String] {
+    func searchResults(_ searchText: String) -> [Provider] {
         if searchText.isEmpty { providersNames }
-        else { providersNames.filter { $0.contains(searchText) }
+        else { providersNames.filter { $0.contains(text: searchText) }
         }
     }
-    
-    private func makeProvidersNames(_ providers: [Provider]) -> [String] {
-        var names: [String] = []
-        for index in 0..<providers.count {
-            names.append(providers[index].name)
-        }
-        return names
-    }
-    
-
 }

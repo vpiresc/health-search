@@ -9,12 +9,11 @@ import Foundation
 @testable import HealthSearch
 
 final class HealthListViewModelSpy: HealthListViewModel {
+    var providersNames: [Provider] = []
     var pageTitle: String = "Page title"
-    
-    var providersNames: [String] = ["H1","H2","H3",]
     var prepareDataWasCalled = 0
     
-    func searchResults(_ searchText: String) -> [String] {
+    func searchResults(_ searchText: String) -> [Provider] {
         return providersNames
     }
     
