@@ -1,4 +1,4 @@
-# About the Health Search #
+# About the Health Search App #
 
 ![](https://github.com/vpiresc/health-search/blob/main/images/health-providers-high-level-design.png)
 
@@ -20,7 +20,7 @@ This is a list of health providers. You can search for a health provider name by
 
 
 ## Installation
-To run the The Menu App locally, follow these steps:
+To run the Health Search App locally, follow these steps:
 
 1. Clone the repository to your local machine using `git clone`.
 2. Open the project in Xcode.
