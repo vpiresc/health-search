@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "C58FB05E-14E1-4366-8B94-4275548EDC0C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:HealthSearch.xcodeproj",
+      "identifier" : "9C0936432C0F4CEB001E875E",
+      "name" : "HealthSearch"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:HealthSearch.xcodeproj",
+        "identifier" : "9C0936532C0F4CEE001E875E",
+        "name" : "HealthSearchTests"
+      }
+    }
+  ],
+  "version" : 1
+}

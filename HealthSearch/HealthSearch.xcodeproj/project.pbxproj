@@ -73,6 +73,7 @@
 		9C9DE36A2C10961E00BC281D /* ProviderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderResponse.swift; sourceTree = "<group>"; };
 		9C9DE36C2C10964800BC281D /* ProviderResponse+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProviderResponse+Mapper.swift"; sourceTree = "<group>"; };
 		9C9DE3702C1098C800BC281D /* HealthListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthListViewModelSpy.swift; sourceTree = "<group>"; };
+		9CB0A38C2C11FFDE0097DD12 /* HealthSearch.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = HealthSearch.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 		9C09363B2C0F4CEB001E875E = {
 			isa = PBXGroup;
 			children = (
+				9CB0A38C2C11FFDE0097DD12 /* HealthSearch.xctestplan */,
 				9C0936462C0F4CEB001E875E /* HealthSearch */,
 				9C0936572C0F4CEE001E875E /* HealthSearchTests */,
 				9C0936452C0F4CEB001E875E /* Products */,
